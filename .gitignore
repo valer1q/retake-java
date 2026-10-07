@@ -1,0 +1,9 @@
+.DS_Store
+out/
+build/
+.gradle/
+node_modules/
+dist/
+.idea/workspace.xml
+.idea/shelf/
+.idea/usage.statistics.xml
