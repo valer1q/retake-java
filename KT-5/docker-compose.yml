@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: taskmanager-kt5-postgres
+    environment:
+      POSTGRES_DB: taskmanager
+      POSTGRES_USER: taskmanager_user
+      POSTGRES_PASSWORD: taskmanager_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/02_create_tables.sql:/docker-entrypoint-initdb.d/02_create_tables.sql:ro
+      - ./database/03_insert_data.sql:/docker-entrypoint-initdb.d/03_insert_data.sql:ro
+      - taskmanager-data:/var/lib/postgresql/data
+
+volumes:
+  taskmanager-data:

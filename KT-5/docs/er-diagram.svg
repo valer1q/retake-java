@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="600.0" y="42" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#1f2933" text-anchor="middle">Task Manager (КТ-5) - схема базы данных taskmanager (PostgreSQL)</text>
+<rect x="60" y="90" width="300" height="216" rx="6" fill="#ffffff" stroke="#2f5d8a" stroke-width="1.5"/>
+<path d="M60,124 L60,96 Q60,90 66,90 L354,90 Q360,90 360,96 L360,124 Z" fill="#2f5d8a"/>
+<text x="210.0" y="112" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">users</text>
+<rect x="61" y="124" width="298" height="26" fill="#fff6d6"/>
+<text x="70" y="142" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#b7791f" text-anchor="start">PK</text>
+<text x="122" y="142" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2933" text-anchor="start">id</text>
+<text x="348" y="142" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">BIGINT  IDENTITY</text>
+<line x1="60" y1="150" x2="360" y2="150" stroke="#d5dde6" stroke-width="1"/>
+<text x="70" y="168" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start">UQ</text>
+<text x="122" y="168" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">username</text>
+<text x="348" y="168" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">VARCHAR(50)  NN</text>
+<line x1="60" y1="176" x2="360" y2="176" stroke="#d5dde6" stroke-width="1"/>
+<text x="70" y="194" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start">UQ</text>
+<text x="122" y="194" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">email</text>
+<text x="348" y="194" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">VARCHAR(100)  NN</text>
+<line x1="60" y1="202" x2="360" y2="202" stroke="#d5dde6" stroke-width="1"/>
+<text x="70" y="220" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start"></text>
+<text x="122" y="220" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">password_hash</text>
+<text x="348" y="220" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">VARCHAR(100)  NN</text>
+<line x1="60" y1="228" x2="360" y2="228" stroke="#d5dde6" stroke-width="1"/>
+<text x="70" y="246" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start">FK</text>
+<text x="122" y="246" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">role_code</text>
+<text x="348" y="246" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">VARCHAR(20)  NN</text>
+<line x1="60" y1="254" x2="360" y2="254" stroke="#d5dde6" stroke-width="1"/>
+<text x="70" y="272" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start"></text>
+<text x="122" y="272" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">enabled</text>
+<text x="348" y="272" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">BOOLEAN  NN</text>
+<line x1="60" y1="280" x2="360" y2="280" stroke="#d5dde6" stroke-width="1"/>
+<text x="70" y="298" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start"></text>
+<text x="122" y="298" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">created_at</text>
+<text x="348" y="298" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">TIMESTAMP  NN</text>
+<text x="210.0" y="324" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#7b8794" text-anchor="middle">Пользователи (логин, хеш BCrypt, роль)</text>
+<rect x="60" y="420" width="300" height="86" rx="6" fill="#ffffff" stroke="#2f5d8a" stroke-width="1.5"/>
+<path d="M60,454 L60,426 Q60,420 66,420 L354,420 Q360,420 360,426 L360,454 Z" fill="#2f5d8a"/>
+<text x="210.0" y="442" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">roles</text>
+<rect x="61" y="454" width="298" height="26" fill="#fff6d6"/>
+<text x="70" y="472" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#b7791f" text-anchor="start">PK</text>
+<text x="122" y="472" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2933" text-anchor="start">code</text>
+<text x="348" y="472" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">VARCHAR(20)</text>
+<line x1="60" y1="480" x2="360" y2="480" stroke="#d5dde6" stroke-width="1"/>
+<text x="70" y="498" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start"></text>
+<text x="122" y="498" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">title</text>
+<text x="348" y="498" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">VARCHAR(50)  NN</text>
+<text x="210.0" y="524" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#7b8794" text-anchor="middle">Справочник ролей: USER, ADMIN</text>
+<rect x="450" y="90" width="320" height="216" rx="6" fill="#ffffff" stroke="#2f5d8a" stroke-width="1.5"/>
+<path d="M450,124 L450,96 Q450,90 456,90 L764,90 Q770,90 770,96 L770,124 Z" fill="#2f5d8a"/>
+<text x="610.0" y="112" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">tasks</text>
+<rect x="451" y="124" width="318" height="26" fill="#fff6d6"/>
+<text x="460" y="142" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#b7791f" text-anchor="start">PK</text>
+<text x="512" y="142" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2933" text-anchor="start">id</text>
+<text x="758" y="142" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">UUID</text>
+<line x1="450" y1="150" x2="770" y2="150" stroke="#d5dde6" stroke-width="1"/>
+<text x="460" y="168" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start">FK</text>
+<text x="512" y="168" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">user_id</text>
+<text x="758" y="168" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">BIGINT  NULL</text>
+<line x1="450" y1="176" x2="770" y2="176" stroke="#d5dde6" stroke-width="1"/>
+<text x="460" y="194" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start">FK</text>
+<text x="512" y="194" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">status_code</text>
+<text x="758" y="194" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">VARCHAR(20)  NN</text>
+<line x1="450" y1="202" x2="770" y2="202" stroke="#d5dde6" stroke-width="1"/>
+<text x="460" y="220" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start"></text>
+<text x="512" y="220" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">title</text>
+<text x="758" y="220" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">VARCHAR(100)  NN, CHECK</text>
+<line x1="450" y1="228" x2="770" y2="228" stroke="#d5dde6" stroke-width="1"/>
+<text x="460" y="246" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start"></text>
+<text x="512" y="246" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">description</text>
+<text x="758" y="246" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">VARCHAR(500)  NULL</text>
+<line x1="450" y1="254" x2="770" y2="254" stroke="#d5dde6" stroke-width="1"/>
+<text x="460" y="272" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start"></text>
+<text x="512" y="272" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">created_at</text>
+<text x="758" y="272" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">TIMESTAMP  NN</text>
+<line x1="450" y1="280" x2="770" y2="280" stroke="#d5dde6" stroke-width="1"/>
+<text x="460" y="298" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start"></text>
+<text x="512" y="298" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">due_date</text>
+<text x="758" y="298" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">TIMESTAMP  NULL</text>
+<text x="610.0" y="324" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#7b8794" text-anchor="middle">Задачи</text>
+<rect x="450" y="420" width="320" height="112" rx="6" fill="#ffffff" stroke="#2f5d8a" stroke-width="1.5"/>
+<path d="M450,454 L450,426 Q450,420 456,420 L764,420 Q770,420 770,426 L770,454 Z" fill="#2f5d8a"/>
+<text x="610.0" y="442" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">task_statuses</text>
+<rect x="451" y="454" width="318" height="26" fill="#fff6d6"/>
+<text x="460" y="472" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#b7791f" text-anchor="start">PK</text>
+<text x="512" y="472" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2933" text-anchor="start">code</text>
+<text x="758" y="472" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">VARCHAR(20)</text>
+<line x1="450" y1="480" x2="770" y2="480" stroke="#d5dde6" stroke-width="1"/>
+<text x="460" y="498" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start"></text>
+<text x="512" y="498" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">title</text>
+<text x="758" y="498" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">VARCHAR(50)  NN</text>
+<line x1="450" y1="506" x2="770" y2="506" stroke="#d5dde6" stroke-width="1"/>
+<text x="460" y="524" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start">UQ</text>
+<text x="512" y="524" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">sort_order</text>
+<text x="758" y="524" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">INT  NN</text>
+<text x="610.0" y="550" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#7b8794" text-anchor="middle">Справочник статусов: TODO, IN_PROGRESS, DONE</text>
+<rect x="860" y="90" width="300" height="86" rx="6" fill="#ffffff" stroke="#2f5d8a" stroke-width="1.5"/>
+<path d="M860,124 L860,96 Q860,90 866,90 L1154,90 Q1160,90 1160,96 L1160,124 Z" fill="#2f5d8a"/>
+<text x="1010.0" y="112" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">task_tags</text>
+<rect x="861" y="124" width="298" height="26" fill="#fff6d6"/>
+<text x="870" y="142" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#b7791f" text-anchor="start">PK FK</text>
+<text x="922" y="142" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2933" text-anchor="start">task_id</text>
+<text x="1148" y="142" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">UUID  NN</text>
+<line x1="860" y1="150" x2="1160" y2="150" stroke="#d5dde6" stroke-width="1"/>
+<rect x="861" y="150" width="298" height="26" fill="#fff6d6"/>
+<text x="870" y="168" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#b7791f" text-anchor="start">PK FK</text>
+<text x="922" y="168" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2933" text-anchor="start">tag_id</text>
+<text x="1148" y="168" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">BIGINT  NN</text>
+<text x="1010.0" y="194" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#7b8794" text-anchor="middle">Связующая таблица (многие-ко-многим)</text>
+<rect x="860" y="420" width="300" height="86" rx="6" fill="#ffffff" stroke="#2f5d8a" stroke-width="1.5"/>
+<path d="M860,454 L860,426 Q860,420 866,420 L1154,420 Q1160,420 1160,426 L1160,454 Z" fill="#2f5d8a"/>
+<text x="1010.0" y="442" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">tags</text>
+<rect x="861" y="454" width="298" height="26" fill="#fff6d6"/>
+<text x="870" y="472" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#b7791f" text-anchor="start">PK</text>
+<text x="922" y="472" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2933" text-anchor="start">id</text>
+<text x="1148" y="472" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">BIGINT  IDENTITY</text>
+<line x1="860" y1="480" x2="1160" y2="480" stroke="#d5dde6" stroke-width="1"/>
+<text x="870" y="498" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2b6cb0" text-anchor="start">UQ</text>
+<text x="922" y="498" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#1f2933" text-anchor="start">name</text>
+<text x="1148" y="498" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">VARCHAR(30)  NN</text>
+<text x="1010.0" y="524" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#7b8794" text-anchor="middle">Теги задач</text>
+<path d="M360,137.0 L405,137.0 L405,163.0 L450,163.0" fill="none" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="370" y1="129.0" x2="370" y2="145.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="376" y1="129.0" x2="376" y2="145.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="435" y1="163.0" x2="450" y2="153.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="435" y1="163.0" x2="450" y2="163.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="435" y1="163.0" x2="450" y2="173.0" stroke="#3e4c59" stroke-width="1.6"/>
+<text x="378" y="125.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2933" text-anchor="start">1</text>
+<text x="428" y="149.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2933" text-anchor="start">N</text>
+<path d="M450,467.0 L420,467.0 L420,189.0 L450,189.0" fill="none" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="434" y1="459.0" x2="434" y2="475.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="440" y1="459.0" x2="440" y2="475.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="435" y1="189.0" x2="450" y2="179.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="435" y1="189.0" x2="450" y2="189.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="435" y1="189.0" x2="450" y2="199.0" stroke="#3e4c59" stroke-width="1.6"/>
+<text x="428" y="455.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2933" text-anchor="start">1</text>
+<text x="428" y="211.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2933" text-anchor="start">N</text>
+<path d="M60,467.0 L30,467.0 L30,241.0 L60,241.0" fill="none" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="44" y1="459.0" x2="44" y2="475.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="50" y1="459.0" x2="50" y2="475.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="45" y1="241.0" x2="60" y2="231.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="45" y1="241.0" x2="60" y2="241.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="45" y1="241.0" x2="60" y2="251.0" stroke="#3e4c59" stroke-width="1.6"/>
+<text x="48" y="455.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2933" text-anchor="end">1</text>
+<text x="52" y="227.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2933" text-anchor="end">N</text>
+<path d="M770,137.0 L860,137.0" fill="none" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="780" y1="129.0" x2="780" y2="145.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="786" y1="129.0" x2="786" y2="145.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="845" y1="137.0" x2="860" y2="127.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="845" y1="137.0" x2="860" y2="137.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="845" y1="137.0" x2="860" y2="147.0" stroke="#3e4c59" stroke-width="1.6"/>
+<text x="788" y="125.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2933" text-anchor="start">1</text>
+<text x="838" y="123.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2933" text-anchor="start">N</text>
+<path d="M1160,467.0 L1185,467.0 L1185,163.0 L1160,163.0" fill="none" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="1170" y1="459.0" x2="1170" y2="475.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="1176" y1="459.0" x2="1176" y2="475.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="1175" y1="163.0" x2="1160" y2="153.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="1175" y1="163.0" x2="1160" y2="163.0" stroke="#3e4c59" stroke-width="1.6"/>
+<line x1="1175" y1="163.0" x2="1160" y2="173.0" stroke="#3e4c59" stroke-width="1.6"/>
+<text x="1178" y="455.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2933" text-anchor="start">1</text>
+<text x="1172" y="149.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2933" text-anchor="start">N</text>
+<rect x="30" y="584" width="1140" height="116" rx="6" fill="#f5f7fa" stroke="#d5dde6"/>
+<text x="46" y="606" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2933" text-anchor="start">Связи (внешние ключи):</text>
+<text x="46" y="630" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#1f2933" text-anchor="start">roles 1 - N users: fk_users_role (users.role_code -&gt; roles.code), роль используется Spring Security (ROLE_USER, ROLE_ADMIN)</text>
+<text x="46" y="650" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#1f2933" text-anchor="start">users 1 - N tasks: fk_tasks_user (tasks.user_id -&gt; users.id), ON DELETE SET NULL</text>
+<text x="46" y="670" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#1f2933" text-anchor="start">task_statuses 1 - N tasks: fk_tasks_status (tasks.status_code -&gt; task_statuses.code)</text>
+<text x="46" y="690" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#1f2933" text-anchor="start">tasks N - M tags через task_tags: fk_task_tags_task, fk_task_tags_tag, ON DELETE CASCADE</text>
+<text x="1154" y="606" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52606d" text-anchor="end">PK - первичный ключ   FK - внешний ключ   UQ - уникальное   NN - NOT NULL</text>
+</svg>
